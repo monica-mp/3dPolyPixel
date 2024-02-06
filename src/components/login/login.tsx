@@ -55,29 +55,35 @@ function Login() {
 
 
   return (
-    <div>
+    <div  className="h-screen flex justify-center items-center border-l-8 border-lightPurple bg-black text-white">
+      <div className="w-1/3 flex flex-col px-16 py-20 rounded-xl">
+        <div className="flex gap-2 items-center ">
+          <img src="src\assets\img\logo.png" alt="logo" className="w-16"/>
+          <h1 className="text-3xl font-font2">3dPolyPixel</h1>          
+        </div>
+        <span className="h-0.5 bg-white w-1/6 my-20 rounded"></span>
+        <div>          
+          <h1 className="text-6xl font-font2 font-normal">A 3d marketplace to find any model you need</h1>          
+        </div>
+      </div> 
+      <form onSubmit={handleSubmit} className="w-1/3 flex flex-col bg-gray px-16 py-20 rounded-xl">  
+        <h1 className="text-3xl font-bold font-font2 mb-8">Login</h1>      
         
-        <form onSubmit={handleSubmit}>
+        <input type="text" name="email" onChange={handleChange} placeholder="example@gmail.com"  className="h-12 bg-black p-4 rounded-xl"  />
+        <span className="h-2 bg-gradient-to-r from-purple to-lightPink mb-6"></span>
         
-        <label htmlFor="email">Email</label>
-        <input type="text" name="email" onChange={handleChange}/>
-
-        <label htmlFor="password">Password</label>
-        <input type="password" name="password" onChange={handleChange}/>
-        {error && <p>{error}</p>}
-        <button>Sign up</button>
-        
+        <input type="password" name="password" onChange={handleChange} placeholder="******" className="h-12 bg-black p-4 rounded-xl"/>
+        <span className="h-2 bg-gradient-to-r from-purple to-lightPink"></span>
+        {error && <p className="text-lightPink mt-2">{error}</p>}         
         <button
-          className="btn btn-outline text-white  font-bold whitespace-nowrap bg-orange-400 justify-center  mt-7 px-16  rounded-md max-md:max-w-full max-md:px-5"
+          className="btn py-2 px-6 bg-gradient-to-r from-purple to-pinkBorder mb-4 text-xl text-white font-font2  mt-16"
           type="submit"
         >
-          Login
+          LOGIN
         </button>
-        <Link to="/signup">Don't have an account? Signup</Link>
-    </form>
-    
-
-    </div>
+        <Link to="/signup">Already have an account? <a className="text-lightPink">Sign up</a></Link>
+      </form>
+    </div>    
     
   )
 }

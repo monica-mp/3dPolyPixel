@@ -1,7 +1,7 @@
 import Signup from "../components/signup/signup"
 const SignupPage = () => {
   return (
-    <div >
+    <div>
         <Signup />        
     </div>
   )

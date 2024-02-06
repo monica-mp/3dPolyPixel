@@ -5,7 +5,7 @@ const WelcomeCard = () => {
     <div>
       <div className="absolute flex items-center gap-3 m-4">
         <img src="src/assets/img/logo.png" alt="logo" className="w-12"/>
-        <p className='font-font3 text-xl text-white'>3dPolyPixel</p>        
+        <p className='font-font2 text-xl text-white'>3dPolyPixel</p>        
       </div>
       <div className="font-font3 flex justify-between px-32 bg-opacity-55 bg-black rounded-2xl w-4/5 h-4/5 shadow-xl absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
         <div className="flex flex-col justify-between h-3/6  my-auto">

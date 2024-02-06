@@ -13,6 +13,10 @@ export default {
       cardBackground:  "#242424",
       pinkBorder: "#F51FFC",
       purple: "#420C63 ",
+      red: "#FF0000",
+      gray: "#111111",
+      lightPink: "#FF85E7",
+      lightPurple: "#BB64AA"
     },
     fontFamily: {
       "font2": ["Manrope"],
