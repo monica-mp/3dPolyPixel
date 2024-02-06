@@ -16,6 +16,7 @@ export default {
     },
     fontFamily: {
       "font2": ["Manrope"],
+      "font3": ["Rubik"],
     },
   },
   plugins: [daisyui],

@@ -1,5 +1,10 @@
-import { createContext, ReactNode, useContext } from "react";
-
+import React, {
+  createContext,
+  useContext,
+  
+  
+  type ReactNode
+} from 'react'
 // Creation of the context
 const Context = createContext<ContextProps | undefined>(undefined)
 
@@ -27,11 +32,10 @@ interface ContextProps {
 
 export const ContextProvider: React.FC<Props> = ({children}) =>{
    
-
-    
+ 
 
     const contextValue: ContextProps = {
-        
+      
     }
     
     
