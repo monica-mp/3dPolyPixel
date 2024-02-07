@@ -55,7 +55,7 @@ function Login() {
 
 
   return (
-    <div  className="h-screen flex justify-center items-center border-l-8 border-lightPurple bg-black text-white">
+    <div  className="h-screen flex justify-center items-center border-l-8 border-lightPurple bg-blackBackground2 text-white">
       <div className="w-1/3 flex flex-col px-16 py-20 rounded-xl">
         <div className="flex gap-2 items-center ">
           <img src="src\assets\img\logo.png" alt="logo" className="w-16"/>
@@ -69,10 +69,10 @@ function Login() {
       <form onSubmit={handleSubmit} className="w-1/3 flex flex-col bg-gray px-16 py-20 rounded-xl">  
         <h1 className="text-3xl font-bold font-font2 mb-8">Login</h1>      
         
-        <input type="text" name="email" onChange={handleChange} placeholder="example@gmail.com"  className="h-12 bg-black p-4 rounded-xl"  />
+        <input type="text" name="email" onChange={handleChange} placeholder="example@gmail.com"  className="h-12 bg-black p-4 rounded focus:outline-none focus:ring focus:ring-lightPurple"  />
         <span className="h-2 bg-gradient-to-r from-purple to-lightPink mb-6"></span>
         
-        <input type="password" name="password" onChange={handleChange} placeholder="******" className="h-12 bg-black p-4 rounded-xl"/>
+        <input type="password" name="password" onChange={handleChange} placeholder="******" className="h-12 bg-black p-4 rounded focus:outline-none focus:ring focus:ring-lightPurple"/>
         <span className="h-2 bg-gradient-to-r from-purple to-lightPink"></span>
         {error && <p className="text-lightPink mt-2">{error}</p>}         
         <button
@@ -81,7 +81,7 @@ function Login() {
         >
           LOGIN
         </button>
-        <Link to="/signup">Already have an account? <a className="text-lightPink">Sign up</a></Link>
+        <Link to="/signup">Don't have an account? <a className="text-lightPink">Sign up</a></Link>
       </form>
     </div>    
     

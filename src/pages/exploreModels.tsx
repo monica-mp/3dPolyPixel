@@ -1,5 +1,6 @@
-
 import { useAuth } from "../context/authContext"
+import SideMenu from "../components/sideMenu/sideMenu"
+import Navbar from "../components/navbar/navbar"
 
 const ExploreModels = () => {
   const { logout, loading} = useAuth()
@@ -14,8 +15,9 @@ const ExploreModels = () => {
     return <div>Loading...</div>
   }
   return (
-    <div>
-      <div>exploreModels</div>
+    <div className="bg-blackBackground h-screen w-screen  pr-6 pt-2">
+      <Navbar/>      
+      <SideMenu/>
       <button onClick={handleLogout}>Logout</button>
     </div>
     
