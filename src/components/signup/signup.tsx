@@ -23,7 +23,7 @@ function Login() {
         setError('');
         try {
           await signup(user.email,user.password);          
-          navigate('/exploreModels');
+          navigate('/models');
        
        } catch (error:any) {
            
@@ -54,7 +54,7 @@ function Login() {
 
 
   return (
-    <div  className="h-screen flex justify-center items-center border-l-8 border-lightPurple bg-blackBackground2 text-white">
+    <div  className="h-screen flex justify-center items-center border-l-8 border-lightPurple bg-blackBackground text-white">
       <div className="w-1/3 flex flex-col px-16 py-20 rounded-xl">
         <div className="flex gap-2 items-center ">
           <img src="src\assets\img\logo.png" alt="logo" className="w-16"/>

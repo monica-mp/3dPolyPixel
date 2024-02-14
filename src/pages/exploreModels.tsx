@@ -1,27 +1,21 @@
-import { useAuth } from "../context/authContext"
-import SideMenu from "../components/sideMenu/sideMenu"
-import Navbar from "../components/navbar/navbar"
+
+import { MenuProvider } from "../context/menuContext";
+import SideMenu from "../components/sideMenu/sideMenu";
+import Navbar from "../components/navbar/navbar";
+import Header from "../components/header/header";
+import FilterButtons from "../components/filterButtons/filterButtons";
 
 const ExploreModels = () => {
-  const { logout, loading} = useAuth()
-  
-
-  const handleLogout = async () => {
-    await logout()
-   
-  }
-
-  if(loading) {
-    return <div>Loading...</div>
-  }
   return (
-    <div className="bg-blackBackground h-screen w-screen  pr-6 pt-2">
-      <Navbar/>      
-      <SideMenu/>
-      <button onClick={handleLogout}>Logout</button>
-    </div>
-    
-  )
-}
+    <MenuProvider>
+      <div className="bg-gray h-screen w-screen relative">
+        <Navbar />
+        <SideMenu />
+        <Header/>
+        <FilterButtons />
+      </div>
+    </MenuProvider>
+  );
+};
 
-export default ExploreModels
+export default ExploreModels;

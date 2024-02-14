@@ -14,9 +14,9 @@ export function Rutes (): JSX.Element {
         <Route path="/" element={<Welcome />} />        
         <Route path="/login" element={<Login />} />        
         <Route path="/signup" element={<Signup />} />        
-        <Route path="/exploreModels" element={
+        <Route path="/models" element={
         <ProtectedRoute>
-        <ExploreModels />
+          <ExploreModels />
         </ProtectedRoute>
         } />      
       </Routes>
