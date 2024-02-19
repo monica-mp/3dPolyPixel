@@ -76,7 +76,7 @@ const SideMenu = () => {
             </li>
           ))}
         </ul>        
-        <div className="absolute bottom-10 left-6 font-font2 text-lightPurple">
+        <div className="absolute bottom-20 left-6 font-font2 text-lightPurple">
           <button onClick={handleLogout} className="flex items-center">
             <img src="src\assets\img\logoutP.png" alt="logout icon" className="w-10 pr-2" />
             <span className={`${!isOpen && "hidden"} origin-left duration-300`}>Logout</span>

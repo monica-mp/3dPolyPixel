@@ -1,20 +1,29 @@
 
 import { MenuProvider } from "../context/menuContext";
+import { ContextProvider } from "../context/context";
 import SideMenu from "../components/sideMenu/sideMenu";
 import Navbar from "../components/navbar/navbar";
 import Header from "../components/header/header";
 import FilterButtons from "../components/filterButtons/filterButtons";
+import Models from "../components/3dmodels/models";
+import ScrollButton from "../components/scrollButton/scrollButton";
+
 
 const ExploreModels = () => {
-  return (
-    <MenuProvider>
-      <div className="bg-gray h-screen w-screen relative">
-        <Navbar />
+  return (    
+    <div className="bg-gray">
+      <MenuProvider> 
         <SideMenu />
+        <Navbar />
         <Header/>
-        <FilterButtons />
-      </div>
-    </MenuProvider>
+        <FilterButtons />         
+        <ContextProvider>
+          <Models />
+        </ContextProvider>             
+    </MenuProvider>   
+    <ScrollButton/> 
+    </div>
+      
   );
 };
 
