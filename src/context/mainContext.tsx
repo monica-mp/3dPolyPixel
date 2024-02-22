@@ -6,6 +6,7 @@ import React, {
   useState,
   type ReactNode
 } from 'react';
+import { Model } from '../types';
 
 // Creation of the context
 const Context = createContext<ContextProps | undefined>(undefined);
@@ -27,28 +28,18 @@ interface Props {
 // Definition of the properties of the context
 interface ContextProps {
   models: Model[]; 
+  handleClick: (model: Model) => void;
+  selectedModel: Model | null;
+  handleClose: () => void;
+  getRandomNumber: () => number;
+  getRandomYesOrNo: () => string;
 }
 
-// Definition of the model
-interface Model {
-  uid: string;
-  name: string;
-  viewCount: number;
-  likeCount: number;
-  user: {
-    displayName: string;
-  };
-  thumbnails: {
-    images: {
-      url: string;      
-    }[];
-  };
-  
-}
+
 
 const fetchModels = async () => {
   try {
-    const response = await fetch('https://api.sketchfab.com/v3/models?sort_by=createdAt&archives_flavours=false', {
+    const response = await fetch('https://api.sketchfab.com/v3/models?sort_by=createdAt&archives_flavours=false&count=24', {
       headers: {
         'Authorization': 'Token 2b0661d037194c9ba118589821290f3c'
       }
@@ -66,18 +57,41 @@ const fetchModels = async () => {
   }
 };
 
+
 export const ContextProvider: React.FC<Props> = ({ children }) => {
   const [models, setModels] = useState<Model[]>([]);
+  const [selectedModel, setSelectedModel] = useState<Model | null>(null);  
+  
+  const getRandomNumber = () => {
+    return Math.floor(Math.random() * 100);
+}
 
+  const getRandomYesOrNo = () => {
+    return Math.random() < 0.5 ? 'Yes' : 'No';
+  }
   useEffect(() => {
     fetchModels().then((fetchedModels) => {
       setModels(fetchedModels);
     });
   }, []); 
+
   
 
+    const handleClick = (model: Model | null): void => {
+        setSelectedModel(model); 
+    };
+  
+    const handleClose = () => {
+      handleClick(null);
+  };
+
   const contextValue: ContextProps = {
-    models
+    models,
+    handleClick,
+    selectedModel,
+    handleClose,
+    getRandomNumber,
+    getRandomYesOrNo
   };
 
   return (

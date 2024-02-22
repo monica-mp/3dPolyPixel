@@ -19,6 +19,8 @@ export default {
       lightPink: "#FF85E7",
       lightPurple: "#BB64AA",      
       blackBackground: "#101010",
+      whiteText: "#DDDDDD",
+      borderWhite: "#8B8B8B"
     },
     fontFamily: {
       "font2": ["Manrope"],

@@ -1,6 +1,6 @@
 
 import { MenuProvider } from "../context/menuContext";
-import { ContextProvider } from "../context/context";
+import { ContextProvider } from "../context/mainContext";
 import SideMenu from "../components/sideMenu/sideMenu";
 import Navbar from "../components/navbar/navbar";
 import Header from "../components/header/header";
@@ -21,7 +21,7 @@ const ExploreModels = () => {
           <Models />
         </ContextProvider>             
     </MenuProvider>   
-    <ScrollButton/> 
+    <ScrollButton/>
     </div>
       
   );

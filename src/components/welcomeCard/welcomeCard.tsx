@@ -14,7 +14,7 @@ const WelcomeCard = () => {
             <h2>Find any model</h2>                          
             <h2>you can imagine</h2>     
           </div>  
-          <Link to="/login">                 
+          <Link to="/models">                 
             <button className="btn py-3 px-12 btn-lg bg-gradient-to-r from-purple to-pinkBorder hover:bg-gradient-to-l from-purple to-pinkBorder hover:border-pinkBorder shadow-xl btn-rounded rounded-full text-white text-3xl border-2 border-pinkBorder font-font2 font-normal">Start exploring</button>
           </Link>
         </div> 
