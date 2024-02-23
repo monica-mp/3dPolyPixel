@@ -53,8 +53,8 @@ const ModelDetails = () => {
                     <iframe
                         title={selectedModel!.name}
                         src={selectedModel!.embedUrl}
-                        width="750"
-                        height="500"
+                        width="1000"
+                        height="600"
                         allowFullScreen
                     />
                     <div className="flex flex-col justify-between mt-6">
@@ -66,7 +66,22 @@ const ModelDetails = () => {
                                 <div className="flex gap-1 text-lightPink"><img src="src\assets\img\comments.png" className="w-6" />{selectedModel!.commentCount}</div>
                             </div>
                         </div>
-
+                        <div className="border-2 border-lightPurple flex  w-72 bg-black bg-opacity-40 py-2 pr-4 pl-2 rounded-xl justify-between items-center">
+                            <div className="flex gap-2">
+                                <div>
+                                    <img
+                                        src={selectedModel!.user.avatar.images[1].url}
+                                        alt="User Avatar"
+                                        className="w-16 h-16 rounded-md"
+                                    />
+                                </div>
+                                <div className="flex flex-col">
+                                    <p>{selectedModel!.user.username.length > 10 ? selectedModel!.user.username.slice(0, 10) + '...' : selectedModel!.user.username}</p>
+                                    <p className="text-xs">{selectedModel!.user.displayName.length > 10 ? selectedModel!.user.displayName.slice(0, 10) + '...' : selectedModel!.user.displayName}</p>
+                                </div>
+                            </div>
+                            <button className="btn btn-sm text-whiteText bg-gray border-lightPink hover:text-black hover:bg-lightPink rounded-full">Follow</button>
+                        </div>
                         <div className="w-72 p-4 rounded-xl flex flex-col gap-2  border-2 border-gray shadow-xl bg-black bg-opacity-40">
                             <h2 className="text-xl mb-4 text-lightPink" >DETAILS</h2>
                             <p>Vertex count: {selectedModel!.vertexCount}</p>
@@ -90,57 +105,42 @@ const ModelDetails = () => {
                         ))}
                     </ul>
                 </div>
-                <div className="border-2 border-lightPurple flex  w-80 bg-black bg-opacity-40 py-2 pr-4 pl-2 rounded-xl justify-between items-center">
-                    <div className="flex gap-2">
-                        <div>
-                            <img
-                                src={selectedModel!.user.avatar.images[1].url}
-                                alt="User Avatar"
-                                className="w-16 h-16 rounded-md"
-                            />
+
+                <div>
+                    {userCollections.length > 0 && (
+                        <div className="flex flex-col gap-2 p-2 mt-10 border-2 border-gray bg-black bg-opacity-40 rounded-xl">
+                            <h2 className="text-xl ml-2 mb-4 text-lightPink">OTHER COLLECTIONS OF {selectedModel!.user.username.toLocaleUpperCase()} </h2>
+                            <div className="flex flex-wrap  gap-4 justify-start">
+                                {userCollections.map((collection: { id: string, name: string, thumbnails: { images: { url: string }[] } }) => (
+                                    <div key={collection.id} className="flex flex-col gap-1 items-center px-2 py-2">
+                                        <img src={collection.thumbnails.images[2].url} alt={`Collection Thumbnail`} className="rounded-md w-72 h-52 border-2 border-borderWhite" />
+                                        <p className="mr-auto">{collection.name}</p>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
-                        <div className="flex flex-col">
-                            <p>{selectedModel!.user.username.length > 10 ? selectedModel!.user.username.slice(0, 10) + '...' : selectedModel!.user.username}</p>
-                            <p className="text-xs">{selectedModel!.user.displayName.length > 10 ? selectedModel!.user.displayName.slice(0, 10) + '...' : selectedModel!.user.displayName}</p>
-                        </div>
-                    </div>
-                    <button className="btn btn-sm text-whiteText bg-gray border-lightPink hover:text-black hover:bg-lightPink rounded-full">Follow</button>
+                    )}
                 </div>
                 <div>
-                {userCollections.length > 0 && (
-                    <div className="flex flex-col gap-2 p-2 mt-10 border-2 border-gray bg-black bg-opacity-40 rounded-xl">
-                        <h2 className="text-xl ml-2 mb-4 text-lightPink">OTHER COLLECTIONS OF {selectedModel!.user.username.toLocaleUpperCase()} </h2>
-                        <div className="flex flex-wrap  gap-4 justify-start">
-                            {userCollections.map((collection: { id: string, name: string, thumbnails: { images: { url: string }[] } }) => (
-                                <div key={collection.id} className="flex flex-col gap-1 items-center px-2 py-2">
-                                    <img src={collection.thumbnails.images[2].url} alt={`Collection Thumbnail`} className="rounded-md w-72 h-52 border-2 border-borderWhite" />
-                                    <p className="mr-auto">{collection.name}</p>
+                    {comments.length > 0 && (
+                        <div className="border-2 border-gray bg-black bg-opacity-40 p-4 mt-10 rounded-xl flex flex-col gap-4">
+                            <h2 className="text-xl text-lightPink">COMMENTS</h2>
+                            {comments.map((comment: { user: { avatar: { images: { url: string }[] }, displayName: string }, body: string, createdAt: string }) => (
+
+                                <div className="flex gap-4">
+                                    <img src={comment.user.avatar.images[1].url} alt="User Avatar" className="w-16 h-16 rounded-md" />
+                                    <div className="flex flex-col my-auto">
+                                        <div>{comment.user.displayName}</div>
+                                        <div>{comment.body}</div>
+                                        <div>{new Date(comment.createdAt).toLocaleString()}</div>
+                                        <span className="w-[70rem] h-[1px] bg-lightPurple rounded-sm my-6"></span>
+                                    </div>
                                 </div>
                             ))}
                         </div>
-                    </div>
-                )}
+                    )}
                 </div>
-                <div>
-                {comments.length > 0 && (
-                    <div className="border-2 border-gray bg-black bg-opacity-40 p-4 mt-10 rounded-xl flex flex-col gap-4">
-                        <h2 className="text-xl text-lightPink">COMMENTS</h2>
-                        {comments.map((comment: { user: { avatar: { images: { url: string }[] }, displayName: string }, body: string, createdAt: string }) => (
 
-                            <div className="flex gap-4">
-                                <img src={comment.user.avatar.images[1].url} alt="User Avatar" className="w-16 h-16 rounded-md" />
-                                <div className="flex flex-col my-auto">
-                                    <div>{comment.user.displayName}</div>
-                                    <div>{comment.body}</div>
-                                    <div>{new Date(comment.createdAt).toLocaleString()}</div>
-                                    <span className="w-[70rem] h-[1px] bg-lightPurple rounded-sm my-6"></span>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                )}
-                </div>
-                
 
 
             </div>
