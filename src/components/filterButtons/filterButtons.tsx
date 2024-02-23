@@ -3,7 +3,7 @@ import { useMenu } from "../../context/menuContext"
 const FilterButtons = () => {
     const {isOpen} = useMenu();
   return (
-    <div className={`flex mb-10 justify-between w-[102rem] font-font2 duration-300 ${isOpen ? "ml-[22rem] w-[92rem]" : "ml-40"}`}>
+    <div className={`flex flex-col md:flex-rowS mb-10 justify-between w-[102rem] font-font2 duration-300  ${isOpen ? "xl:ml-[19rem] xl:w-[60rem] w-[22rem] h-12 " : "xl:ml-28 md:w-[60rem] ml-[3rem] w-[20rem] h-12 xl:h-16"}`}>
         <button className="btn btn-lg bg-blackBackground flex rounded-full hover:bg-black">
           <img src="src\assets\img\trending.png" alt="trending icon" className="w-8" />
           Trending

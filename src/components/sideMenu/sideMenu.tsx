@@ -28,16 +28,16 @@ const SideMenu = () => {
   };
 
   return (
-    <div className="flex fixed">
+    <div className="flex fixed z-10">
       <div
         className={`${
-          isOpen ? "w-72" : "w-20"
-        } duration-300 h-screen px-5 pt-6 bg-blackBackground relative `}
+          isOpen ? "w-72 pl-5  bg-opacity-70" : "xl:w-20 w-10 pl-1 xl:pl-5"
+        } duration-300 h-screen pt-6 bg-blackBackground relative `}
       >
         <img
           src="src\assets\img\arrowW.png"
           alt="arrow icon"
-          className={`absolute cursor-pointer -right-3 top-8 w-6 border-2 border-white rounded-full p-1 ${
+          className={`absolute cursor-pointer -right-3 top-14 w-6 border-2 border-white rounded-full p-1 ${
             !isOpen && "rotate-180"
           }`}
           onClick={toggleMenu}
@@ -49,7 +49,7 @@ const SideMenu = () => {
             alt="logo icon"
             className={`cursor-pointer duration-500 ${
               isOpen && "rotate-[360deg]"
-            } ${isOpen ? "w-16" : "w-10"}`}
+            } ${isOpen ? "w-16" : "w-6"}`}
           />
           <h1
             className={`text-white font-font2 origin-left text-xl  duration-300 ${
@@ -76,7 +76,7 @@ const SideMenu = () => {
             </li>
           ))}
         </ul>        
-        <div className="absolute bottom-20 left-6 font-font2 text-lightPurple">
+        <div className="pl-1 font-font2 text-lightPurple translate-y-32" >
           <Link to="/">
           <button onClick={handleLogout} className="flex items-center">
             <img src="src\assets\img\logoutP.png" alt="logout icon" className="w-10 pr-2" />

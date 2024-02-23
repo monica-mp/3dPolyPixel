@@ -46,7 +46,7 @@ const ModelDetails = () => {
     }, [selectedModel]);
 
     return (
-        <div className={`text-whiteText fixed top-[2rem] bg-blackBackground w-[92rem] h-[54rem] border-2 border-lightPink flex flex-col shadow-xl rounded-xl p-6 z-10 duration-300 ${isOpen ? "left-[22rem]" : "left-[15rem] "}	`}>
+        <div className={`text-whiteText fixed xl:top-[2rem] bg-blackBackground w-[92rem] h-[54rem] border-2 border-lightPink flex flex-col shadow-xl rounded-xl p-6 z-10 duration-300 ${isOpen ? "xl:left-[22rem]" : "xl:left-[8rem] "}	`}>
             <div className="overflow-auto px-4 flex flex-col gap-4" id="custom-scroll">
                 <button className="btn btn-sm bg-gray absolute top-4 right-10 text-white border-lightPink hover:text-black hover:bg-lightPink rounded-full" onClick={handleClose}>X</button>
                 <div className="flex gap-8">

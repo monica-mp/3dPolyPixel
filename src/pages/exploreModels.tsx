@@ -10,20 +10,20 @@ import ScrollButton from "../components/scrollButton/scrollButton";
 
 
 const ExploreModels = () => {
-  return (    
+  return (
     <div className="bg-gray">
-      <MenuProvider> 
+      <MenuProvider>
         <SideMenu />
         <Navbar />
-        <Header/>
-        <FilterButtons />         
+        <Header />
+        <FilterButtons />
         <ContextProvider>
           <Models />
-        </ContextProvider>             
-    </MenuProvider>   
-    <ScrollButton/>
+        </ContextProvider>
+      </MenuProvider>
+      <ScrollButton />
     </div>
-      
+
   );
 };
 

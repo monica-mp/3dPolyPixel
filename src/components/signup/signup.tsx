@@ -54,18 +54,18 @@ function Login() {
 
 
   return (
-    <div  className="h-screen flex justify-center items-center border-l-8 border-lightPurple bg-blackBackground text-white">
-      <div className="w-1/3 flex flex-col px-16 py-20 rounded-xl">
-        <div className="flex gap-2 items-center ">
-          <img src="src\assets\img\logo.png" alt="logo" className="w-16"/>
-          <h1 className="text-3xl font-font2">3dPolyPixel</h1>          
+    <div  className="h-screen flex flex-col lg:flex-row justify-evenly py-20 items-center border-l-8 border-lightPurple bg-blackBackground text-white gap-10 xl:px-52 lg:px-32 md:py-0">
+      <div className="w-2/3 h-1/4 justify-between md:justify-evenly flex flex-col rounded-xl xl:h-2/4 lg:h-2/5 md:w-2/3 md:mt-14 gap-1">
+      <div className="flex gap-4 items-center ">
+      <img src="src\assets\img\logo.png" alt="logo" className="w-10"/>
+      <h1 className="text-xl font-font2">3dPolyPixel</h1>          
         </div>
-        <span className="h-0.5 bg-white w-1/6 my-20 rounded"></span>
+        <span className="h-0.5 bg-white w-2/6 rounded"></span>
         <div>          
-          <h1 className="text-6xl font-font2 font-normal">A 3d marketplace to find any model you need</h1>          
+        <h1 className="text-xl font-font2 font-normal md:text-4xl lg:text-5xl">A 3d marketplace to find any model you need</h1>          
         </div>
       </div> 
-      <form onSubmit={handleSubmit} className="w-1/3 flex flex-col bg-gray px-16 py-20 rounded-xl">  
+      <form onSubmit={handleSubmit} className="w-2/3 h-/5 flex flex-col bg-gray px-10 py-16 rounded-xl lg:py-20 lg:px-16 md:w-2/3 md:py-16 md:px-16">  
         <h1 className="text-3xl font-bold font-font2 mb-8">Sign up</h1>      
         
         <input type="text" name="email" onChange={handleChange} placeholder="example@gmail.com"  className="h-12 bg-black p-4 rounded focus:outline-none focus:ring focus:ring-lightPurple"  />
