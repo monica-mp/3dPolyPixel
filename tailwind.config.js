@@ -26,6 +26,13 @@ export default {
       "font2": ["Manrope"],
       "font3": ["Rubik"],
     },
+    screens: {
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1650px',
+    }
   },
   plugins: [daisyui],
   

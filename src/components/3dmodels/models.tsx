@@ -8,7 +8,7 @@ const Models = () => {
     
 
     return (
-        <div className={`relative font-font2 duration-300 ${isOpen ? "2xl:w-[80rem] lg:ml-[16rem] xl:w-[62rem] lg:w-[45rem] md:w-[52rem] md:w-[42rem] w-[20rem] mx-auto" : "xl:ml-24 md:w-[44rem] lg:w-[57rem] xl:w-[72rem] 2xl:w-[94rem] lg:ml-[4rem] ml-[4rem] w-[18rem] "}`}>
+        <div className={`relative font-font2 duration-300 ${isOpen ? "2xl:w-[100rem] lg:ml-[16rem] xl:w-[62rem] lg:w-[45rem] md:w-[42rem] w-[20rem] mx-auto" : "2xl:w-[108rem] xl:ml-24 md:w-[42rem] lg:w-[57rem] xl:w-[72rem] 2xl:w-[94rem] lg:ml-[4rem] ml-[4rem] w-[18rem] "}`}>
             {selectedModel && <ModelDetails />} 
             <ul className="flex flex-wrap gap-10 justify-between">
                 {models.map(model => (
@@ -23,8 +23,8 @@ const Models = () => {
                                     <p>{model.user.displayName.length > 10 ? model.user.displayName.slice(0, 10) + '...' : model.user.displayName}</p>
                                 </div>
                                 <div className="text-lightPink ml-auto flex flex-col gap-2">
-                                    <p className="flex gap-2"><img src="public\assets\img\eye.png" alt="eye icon" className="w-6" />{model.viewCount}</p>
-                                    <p className="flex gap-2"><img src="public\assets\img\heart.png" alt="heart icon" className="w-6" />{model.viewCount}</p>
+                                    <p className="flex gap-2"><img src="\assets\img\eye.png" alt="eye icon" className="w-6" />{model.viewCount}</p>
+                                    <p className="flex gap-2"><img src="\assets\img\heart.png" alt="heart icon" className="w-6" />{model.viewCount}</p>
                                 </div>
                             </div>
                         </div>
