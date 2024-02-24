@@ -31,7 +31,7 @@ const SideMenu = () => {
     <div className="flex fixed z-[20]">
       <div
         className={`${
-          isOpen ? "w-72 pl-5 md:w-60 bg-opacity-90" : "xl:w-16 w-10 pl-1 xl:pl-3"
+          isOpen ? "w-72 pl-5 md:w-56 bg-opacity-90" : "xl:w-16 w-10 pl-1 xl:pl-3"
         } duration-300 h-screen pt-6 bg-blackBackground relative `}
       >
         <img
@@ -49,7 +49,7 @@ const SideMenu = () => {
             alt="logo icon"
             className={`cursor-pointer duration-500 ${
               isOpen && "rotate-[360deg]"
-            } ${isOpen ? "w-16" : "w-6"}`}
+            } ${isOpen ? "w-14" : "w-6"}`}
           />
           <h1
             className={`text-white font-font2 origin-left text-xl  duration-300 ${

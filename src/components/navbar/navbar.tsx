@@ -5,7 +5,7 @@ const Navbar = () => {
 
 
     return (
-        <div className={`flex z-[10] sticky top-2 justify-between items-center font-font2 py-2 px-4 font-font2  h-12 ${isOpen ? "2xl:w-[100rem] xl:w-[64rem] lg:ml-[16rem] lg:w-[45rem] md:w-[47rem] w-[20rem] mx-auto" : "2xl:w-[108rem] xl:ml-20 md:w-[44rem] lg:w-[58rem] xl:w-[74rem] 2xl:w-[94rem] ml-[4rem] w-[18rem]"} duration-300 bg-blackBackground rounded-full`}>
+        <div className={`flex z-[10] sticky top-2 justify-between items-center font-font2 py-2 px-4 font-font2  h-12 ${isOpen ? "2xl:ml-72 md:ml-64 lg:ml-72 w-11/12 md:w-7/12 lg:w-8/12 2xl:w-10/12" : "2xl:ml-32 xl:ml-20 ml-[4rem] w-9/12 md:w-11/12"} duration-300 bg-blackBackground rounded-full`}>
             <input type="text" className="small-placeholder w-5/6 h-8 rounded-full pl-2 bg-gray focus:outline-none focus:ring focus:ring-lightPink hover:outline-none hover:ring hover:ring-lightPink" placeholder="Search any model..." />
             <div className="flex gap-2 items-center  w-3/4 justify-end">
                 <div>

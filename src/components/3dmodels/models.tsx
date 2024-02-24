@@ -8,12 +8,12 @@ const Models = () => {
     
 
     return (
-        <div className={`relative font-font2 duration-300 ${isOpen ? "2xl:w-[100rem] lg:ml-[16rem] xl:w-[62rem] lg:w-[45rem] md:w-[42rem] w-[20rem] mx-auto" : "2xl:w-[108rem] xl:ml-24 md:w-[42rem] lg:w-[57rem] xl:w-[72rem] 2xl:w-[94rem] lg:ml-[4rem] ml-[4rem] w-[18rem] "}`}>
+        <div className={`relative font-font2 duration-300  ${isOpen ? "2xl:ml-72 md:ml-64 lg:ml-72 w-11/12 md:w-7/12 lg:w-8/12 2xl:w-10/12" : "2xl:ml-32 xl:ml-20 ml-[4rem] w-9/12 md:w-11/12"}`}>
             {selectedModel && <ModelDetails />} 
             <ul className="flex flex-wrap gap-10 justify-between">
                 {models.map(model => (
                     <li key={`${model.uid}`}>
-                        <div className={`hover:border-2 hover:border-lightPink shadow-xl rounded-xl bg-blackBackground hover:bg-black lg:p-3 lg:h-62 p-4 ${isOpen ? " xl:w-[18rem] xl:p-6 lg:w-[13rem] md:w-48 md:p-2" : "xl:w-60 lg:w-[16rem] md:w-48 md:p-2"} `} onClick={() => handleClick(model)}>
+                        <div className={`hover:border-2 hover:border-lightPink shadow-xl rounded-xl bg-blackBackground hover:bg-black lg:p-3 lg:h-62 p-4 ${isOpen ? " xl:w-[16rem] xl:p-6 lg:w-[12rem] md:w-48 md:p-2" : "xl:w-52 lg:w-[16rem] md:w-48 md:p-2"} `} onClick={() => handleClick(model)}>
                             {model.thumbnails.images.length > 0 && (
                                 <img src={model.thumbnails.images[2].url} alt="model thumbnail" className="xl:h-40 lg:h-[9rem] rounded-xl mx-auto mb-6" />
                             )}
