@@ -35,7 +35,7 @@ const SideMenu = () => {
         } duration-300 h-screen pt-6 bg-blackBackground relative `}
       >
         <img
-          src="src\assets\img\arrowW.png"
+          src="public\assets\img\arrowW.png"
           alt="arrow icon"
           className={`absolute cursor-pointer -right-3 top-[4rem] w-6 border-2 border-white rounded-full p-1 ${
             !isOpen && "rotate-180"
@@ -45,7 +45,7 @@ const SideMenu = () => {
         <Link to="/">
         <div className="flex items-center gap-4">
           <img
-            src="src\assets\img\logo.png"
+            src="public\assets\img\logo.png"
             alt="logo icon"
             className={`cursor-pointer duration-500 ${
               isOpen && "rotate-[360deg]"
@@ -69,7 +69,7 @@ const SideMenu = () => {
               }`}
               onClick={() => handleMenuClick(menu.route)}
             >
-              <img src={`src/assets/img/${menu.src}.png`} className="w-6" />
+              <img src={`public/assets/img/${menu.src}.png`} className="w-6" />
               <span className={`${!isOpen && "hidden"} origin-left duration-300 `}>
                 {menu.title}
               </span>              
@@ -79,7 +79,7 @@ const SideMenu = () => {
         <div className={`pl-1 font-font2 text-lightPurple duration-300 ${isOpen ? "mt-[6rem] lg:mt-[3rem] xl:mt-[10rem]" :" mt-48 lg:mt-[6rem] xl:mt-[14rem]"} `}>
           <Link to="/">
           <button onClick={handleLogout} className="flex items-center">
-            <img src="src\assets\img\logoutP.png" alt="logout icon" className="w-10 pr-2" />
+            <img src="public\assets\img\logoutP.png" alt="logout icon" className="w-10 pr-2" />
             <span className={`${!isOpen && "hidden"} origin-left duration-300`}>Logout</span>
           </button>
           </Link>

@@ -23,8 +23,8 @@ const Models = () => {
                                     <p>{model.user.displayName.length > 10 ? model.user.displayName.slice(0, 10) + '...' : model.user.displayName}</p>
                                 </div>
                                 <div className="text-lightPink ml-auto flex flex-col gap-2">
-                                    <p className="flex gap-2"><img src="src\assets\img\eye.png" alt="eye icon" className="w-6" />{model.viewCount}</p>
-                                    <p className="flex gap-2"><img src="src\assets\img\heart.png" alt="heart icon" className="w-6" />{model.viewCount}</p>
+                                    <p className="flex gap-2"><img src="public\assets\img\eye.png" alt="eye icon" className="w-6" />{model.viewCount}</p>
+                                    <p className="flex gap-2"><img src="public\assets\img\heart.png" alt="heart icon" className="w-6" />{model.viewCount}</p>
                                 </div>
                             </div>
                         </div>

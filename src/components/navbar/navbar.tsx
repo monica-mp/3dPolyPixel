@@ -22,7 +22,7 @@ const Navbar = () => {
                     </div>
                     <div className="dropdown dropdown-bottom dropdown-end">
                         <div tabIndex={0} role="button" className="lg:py-1 md:px-4 rounded-full bg-gray flex gap-2 text-whiteText">
-                            <img src="src/assets/img/avatar.jpg" className="w-6 h-6 rounded-full"/>
+                            <img src="public/assets/img/avatar.jpg" className="w-6 h-6 rounded-full"/>
                            <p className="hidden md:block">User</p>
                             </div>
                         <ul tabIndex={0} className="dropdown-content z-[1] menu shadow bg-blackBackground rounded-box w-24">

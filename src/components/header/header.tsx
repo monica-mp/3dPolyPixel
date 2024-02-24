@@ -10,13 +10,13 @@ const Header = () => {
           <h1>3d model</h1>
         </div>
         <div className={`absolute translate-y-[2rem] ${isOpen ? "-translate-x-[4rem] " : "-translate-x-[6rem]"}`}>
-          <img src="src\assets\img\cloud2.gif" alt="rocket animation" className="w-32 xl:w-48" />
+          <img src="public\assets\img\cloud2.gif" alt="rocket animation" className="w-32 xl:w-48" />
         </div>
         <div className={`absolute duration-300 -translate-y-[8rem] md:-translate-y-[6rem] md:translate-x-[30rem]  ${isOpen ? "translate-x-[8rem] lg:translate-x-[32rem] xl:translate-x-[45rem]" : "translate-x-[6rem] lg:translate-x-[43rem] xl:translate-x-[55rem]"} `}>
-          <img src="src\assets\img\cloud.gif" alt="cloud animation" className="w-32 xl:w-48" />
+          <img src="public\assets\img\cloud.gif" alt="cloud animation" className="w-32 xl:w-48" />
         </div>
         <div className={`absolute translate-x-[0rem] md:translate-x-[18rem] xl:translate-y-[2.5rem] ${isOpen ? "translate-y-[4rem] md:translate-y-[3.5rem] lg:translate-x-[20rem] xl:translate-x-[32rem]" : "translate-y-[4.5rem] md:translate-y-[3.5rem] lg:translate-x-[32rem] xl:translate-x-[45rem]"}`}>
-          <img src="src\assets\img\rocketship.gif" alt="rocket animation" className="w-80 xl:w-96" />
+          <img src="public\assets\img\rocketship.gif" alt="rocket animation" className="w-80 xl:w-96" />
         </div>
       </div>
     </div>

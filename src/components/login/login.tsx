@@ -61,7 +61,7 @@ function Login() {
     <div className="h-screen flex flex-col lg:flex-row justify-evenly py-20 items-center border-l-8 border-lightPurple bg-blackBackground text-white gap-10 xl:px-52 lg:px-32 md:py-0">
       <div className="w-3/4 h-1/4 justify-between md:justify-evenly flex flex-col rounded-xl xl:h-2/4 lg:h-2/5 md:w-2/3 md:mt-14 gap-1">
         <div className="flex gap-4 items-center ">
-          <img src="src\assets\img\logo.png" alt="logo" className="w-10" />
+          <img src="public\assets\img\logo.png" alt="logo" className="w-10" />
           <h1 className="text-xl font-font2">3dPolyPixel</h1>
         </div>
         <span className="h-0.5 bg-white w-2/6 rounded"></span>

@@ -98,7 +98,7 @@ const ModelDetails = () => {
                 </div>
                 <div className="text-xs">PublishedAt: {selectedModel!.publishedAt.toLocaleString()}</div>
                 <div className="flex gap-2 items-center">
-                    <img src="src\assets\img\tag.png" alt="tag icon" className="w-4 h-4" />
+                    <img src="public\assets\img\tag.png" alt="tag icon" className="w-4 h-4" />
                     <ul className="flex flex-wrap gap-2">
                         {selectedModel!.tags.map(tag => (
                             <li key={tag.slug} className="bg-gray border-2 border-borderWhite rounded-full px-2 text-xs ">{tag.slug}</li>
