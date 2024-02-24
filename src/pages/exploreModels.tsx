@@ -23,7 +23,6 @@ const ExploreModels = () => {
       </MenuProvider>
       <ScrollButton />
     </div>
-
   );
 };
 
