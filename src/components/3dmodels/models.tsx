@@ -13,7 +13,7 @@ const Models = () => {
             <ul className="flex flex-wrap gap-10 justify-between">
                 {models.map(model => (
                     <li key={`${model.uid}`}>
-                        <div className={`hover:border-2 hover:border-lightPink shadow-xl rounded-xl bg-blackBackground hover:bg-black lg:p-3 lg:h-62 p-4 ${isOpen ? " xl:w-[16rem] xl:p-6 lg:w-[12rem] md:w-48 md:p-2" : "xl:w-52 lg:w-[16rem] md:w-48 md:p-2"} `} onClick={() => handleClick(model)}>
+                        <div className={`hover:border-2 hover:border-lightPink shadow-xl rounded-xl bg-blackBackground hover:bg-black lg:p-3 lg:h-62 p-4 ${isOpen ? " xl:w-[16rem] xl:p-6 lg:w-[12rem] md:w-48 md:p-2" : "xl:w-72 lg:w-[16rem] md:w-48 md:p-2"} `} onClick={() => handleClick(model)}>
                             {model.thumbnails.images.length > 0 && (
                                 <img src={model.thumbnails.images[2].url} alt="model thumbnail" className="xl:h-40 lg:h-[9rem] rounded-xl mx-auto mb-6" />
                             )}
