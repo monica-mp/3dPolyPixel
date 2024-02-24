@@ -13,9 +13,9 @@ const Models = () => {
             <ul className="flex flex-wrap gap-10 justify-between">
                 {models.map(model => (
                     <li key={`${model.uid}`}>
-                        <div className={`hover:border-2 hover:border-lightPink shadow-xl rounded-xl bg-blackBackground hover:bg-black lg:p-3 lg:h-62 p-4 ${isOpen ? " xl:w-[16rem] xl:p-6 lg:w-[12rem] md:w-48 md:p-2" : "xl:w-72 lg:w-[16rem] md:w-48 md:p-2"} `} onClick={() => handleClick(model)}>
+                        <div className={`hover:border-2 hover:border-lightPink shadow-xl rounded-xl bg-blackBackground hover:bg-black lg:p-3 p-4 ${isOpen ? "2xl:w-[22rem] xl:w-[16rem] xl:p-6 lg:w-[12rem] md:w-48 md:p-2" : "2xl:w-[24rem] 2xl:p-6 xl:w-[16rem] xl:w-72 lg:w-[16rem] md:w-48 md:p-2"} `} onClick={() => handleClick(model)}>
                             {model.thumbnails.images.length > 0 && (
-                                <img src={model.thumbnails.images[2].url} alt="model thumbnail" className="xl:h-40 lg:h-[9rem] rounded-xl mx-auto mb-6" />
+                                <img src={model.thumbnails.images[2].url} alt="model thumbnail" className="xl:w-96 xl:h-40 lg:h-[9rem] rounded-xl mx-auto mb-6" />
                             )}
                             <div className="flex items-center">
                                 <div className="text-white flex flex-col gap-2">

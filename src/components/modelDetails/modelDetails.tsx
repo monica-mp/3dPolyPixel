@@ -47,7 +47,7 @@ const ModelDetails = () => {
     }, [selectedModel]);
 
     return (
-        <div className={`text-whiteText fixed xl:top-[6rem] lg:top-[4rem] md:top-[6rem] top-[4rem] bg-blackBackground border-2 border-lightPink flex flex-col shadow-xl rounded-xl px-1 py-4 z-10 duration-300 xl:h-[42rem] lg:h-[32rem] md:h-[50rem] h-[34rem] ${isOpen ? "2xl:w-[80rem] xl:left-[16rem] xl:w-[62rem] lg:left-[17rem] lg:w-[44rem] md:left-[6rem] md:w-[40rem] left-[2rem] w-[20rem]" : "2xl:w-[90rem] xl:left-[6rem] xl:w-[72rem] lg:left-[4rem] lg:w-[58rem] md:left-[3rem] md:w-[44rem] left-[3rem] w-[20rem]"}	`}>
+        <div className={`text-whiteText fixed xl:top-[6rem] lg:top-[4rem] md:top-[6rem] top-[4rem] bg-blackBackground border-2 border-lightPink flex flex-col shadow-xl rounded-xl px-1 py-4 z-10 duration-300 h-5/6  ${isOpen ? "w-5/6 md:w-7/12 lg:w-8/12 xl:w-9/12 2xl:w-9/12" : "w-9/12 lg:w-11/12"}	`}>
             <div className="overflow-auto px-4 flex flex-col gap-4" id="custom-scroll">
                 <button className="btn btn-sm bg-gray absolute top-2 right-6 text-white border-lightPink hover:text-black hover:bg-lightPink rounded-full" onClick={handleClose}>X</button>
                 <div className="flex gap-8 flex-col lg:flex-row">
@@ -66,7 +66,7 @@ const ModelDetails = () => {
                                 <div className="flex gap-1 text-lightPink"><img src="\assets\img\comments.png" className="w-6" />{selectedModel!.commentCount}</div>
                             </div>
                         </div>
-                        <div className="border-2 border-lightPurple flex  w-64 md:w-72 bg-black bg-opacity-40 py-2 pr-4 pl-2 rounded-xl justify-between items-center">
+                        <div className="border-2 border-lightPurple flex  w-62 md:w-72 bg-black bg-opacity-40 py-2 pr-4 pl-2 rounded-xl justify-between items-center">
                             <div className="flex gap-2">
                                 <div>
                                     <img
@@ -122,14 +122,14 @@ const ModelDetails = () => {
                 </div>
                 <div>
                     {comments.length > 0 && (
-                        <div className="border-2 border-gray bg-black bg-opacity-40 p-1 md:p-4 mt-10 rounded-xl flex flex-col gap-4">
+                        <div className="border-2 border-gray bg-black bg-opacity-40 p-2 md:p-4 mt-10 rounded-xl flex flex-col gap-4">
                             <h2 className="text-xl text-lightPink">COMMENTS</h2>
                             {comments.map((comment: { user: { avatar: { images: { url: string }[] }, displayName: string }, body: string, createdAt: string }) => (
 
-                                <div className="flex gap-4">
-                                    <img src={comment.user.avatar.images[1].url} alt="User Avatar" className="w-16 h-16 rounded-md" />
+                                <div className="flex gap-2">
+                                    <img src={comment.user.avatar.images[1].url} alt="User Avatar" className="w-10 h-10 rounded-md" />
                                     <div className="flex flex-col my-auto">
-                                        <div>{comment.user.displayName}</div>
+                                        <p>{comment.user.displayName.length > 10 ? comment.user.displayName.slice(0, 10) + '...' : comment.user.displayName}</p>
                                         <div className="text-xs">{comment.body}</div>
                                         <div>{new Date(comment.createdAt).toLocaleString()}</div>
                                         <span className="xl:w-[45rem] h-[1px] bg-lightPurple rounded-sm my-6"></span>
