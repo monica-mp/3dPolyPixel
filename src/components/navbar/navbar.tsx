@@ -25,7 +25,7 @@ const Navbar = () => {
                             <img src="/assets/img/avatar.jpg" className="w-6 h-6 rounded-full"/>
                            <p className="hidden md:block">User</p>
                             </div>
-                        <ul tabIndex={0} className="dropdown-content z-[1] menu shadow bg-blackBackground rounded-box w-24">
+                        <ul tabIndex={0} className="dropdown-content z-[1] menu shadow bg-blackBackground rounded-box w-24 text-whiteText">
                             <li><a>Profile</a></li>
                             <li><a>Settings</a></li>
                         </ul>
