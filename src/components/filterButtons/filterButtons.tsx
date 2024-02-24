@@ -3,30 +3,30 @@ import { useMenu } from "../../context/menuContext"
 const FilterButtons = () => {
     const {isOpen} = useMenu();
   return (
-    <div className={`flex flex-col md:flex-rowS mb-10 justify-between w-[102rem] font-font2 duration-300  ${isOpen ? "xl:ml-[19rem] xl:w-[60rem] w-[22rem] h-12 " : "xl:ml-28 md:w-[60rem] ml-[3rem] w-[20rem] h-12 xl:h-16"}`}>
-        <button className="btn btn-lg bg-blackBackground flex rounded-full hover:bg-black">
-          <img src="src\assets\img\trending.png" alt="trending icon" className="w-8" />
-          Trending
+    <div className={`flex mb-6 justify-between  font-font2 duration-300  ${isOpen ? "2xl:w-[80rem] xl:w-[62rem] lg:ml-[16rem] md:w-[47rem] lg:w-[45rem] w-[20rem] mx-auto" : "xl:ml-20 md:w-[44rem] lg:w-[58rem] xl:w-[74rem] 2xl:w-[94rem] ml-[4rem] w-[18rem]"}`}>
+        <button className="btn btn-sm xl:btn-lg lg:btn-md bg-blackBackground flex rounded-full hover:bg-black ">
+          <img src="src\assets\img\trending.png" alt="trending icon" className="w-4 lg:w-8" />
+          <p className="hidden md:block">Trending</p>
         </button>   
-        <button className="btn btn-lg bg-blackBackground w-44 flex rounded-full hover:bg-black">
-          <img src="src\assets\img\art.png" alt="art icon" className="w-8" />
-          Art
+        <button className="btn btn-sm xl:btn-lg lg:btn-md bg-blackBackground flex rounded-full hover:bg-black">
+          <img src="src\assets\img\art.png" alt="art icon" className="w-4 lg:w-8" />
+          <p className="hidden md:block">Art</p>
         </button> 
-        <button className="btn btn-lg bg-blackBackground w-44 flex rounded-full hover:bg-black">
-          <img src="src\assets\img\food.png" alt="food icon" className="w-8" />
-          Food
+        <button className="btn btn-sm xl:btn-lg lg:btn-md bg-blackBackground flex rounded-full hover:bg-black">
+          <img src="src\assets\img\food.png" alt="food icon" className="w-4 lg:w-8" />
+          <p className="hidden md:block">Food</p>
         </button> 
-        <button className="btn btn-lg bg-blackBackground w-44 flex rounded-full hover:bg-black">
-          <img src="src\assets\img\music.png" alt="music icon" className="w-8" />
-          Music
+        <button className="btn btn-sm xl:btn-lg lg:btn-md bg-blackBackground flex rounded-full hover:bg-black">
+          <img src="src\assets\img\music.png" alt="music icon" className="w-4 lg:w-8" />
+          <p className="hidden md:block">Music</p>
         </button> 
-        <button className="btn btn-lg bg-blackBackground w-44 flex rounded-full hover:bg-black">
-          <img src="src\assets\img\car.png" alt="cars icon" className="w-8" />
-          Cars
+        <button className="btn btn-sm xl:btn-lg lg:btn-md bg-blackBackground flex rounded-full hover:bg-black">
+          <img src="src\assets\img\car.png" alt="cars icon" className="w-4 lg:w-8" />
+          <p className="hidden md:block">Cars</p>
         </button>    
-        <button className="btn btn-lg bg-blackBackground w-44 flex rounded-full hover:bg-black">
-          <img src="src\assets\img\sports.png" alt="sports icon" className="w-8" />
-          Sports
+        <button className="btn btn-sm xl:btn-lg lg:btn-md bg-blackBackground flex rounded-full hover:bg-black">
+          <img src="src\assets\img\sports.png" alt="sports icon" className="w-4 lg:w-8" />
+          <p className="hidden md:block">Sports</p>
         </button>                   
     </div>  
   )

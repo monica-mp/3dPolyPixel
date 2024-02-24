@@ -1,25 +1,25 @@
 import { useMenu } from "../../context/menuContext"
 
 const Header = () => {
-    const {isOpen} = useMenu();
+  const { isOpen } = useMenu();
   return (
-    <div className={` w-[102rem] h-96 my-10 duration-300   ${isOpen ? "xl:ml-[19rem] xl:w-[60rem] w-[22rem] h-12 " : "xl:ml-28 md:w-[60rem] ml-[3rem] w-[20rem] h-12 xl:h-16"} bg-gradient-to-r from-purple to-pinkBorder rounded-2xl pl-20`}>
-        <div className="flex justify-between items-center h-full relative">
-          <div className="font-font3 text-4xl text-white w-3/4">
-            <h1>Find your perfect</h1>
-            <h1>3d model</h1>            
-          </div>
-          <div className="absolute transform -translate-x-[8rem] translate-y-[2rem]">
-            <img src="src\assets\img\cloud2.gif" alt="rocket animation"/>
-          </div>
-          <div className={`absolute duration-300 ${isOpen ? "md:translate-x-[70rem] md:-translate-y-[10rem]" : "md:translate-x-[18rem] md:-translate-y-[10rem] "}`}>
-            <img src="src\assets\img\cloud.gif" alt="cloud animation" />
-          </div>
-          <div className="absolute transform md:translate-x-[18rem] md:translate-y-[5.5rem]">
-            <img src="src\assets\img\rocketship.gif" alt="rocket animation" />
-          </div>
-        </div>    
-    </div>  
+    <div className={`h-64 my-8 duration-300  ${isOpen ? "2xl:w-[80rem] xl:w-[62rem] lg:ml-[16rem] lg:w-[45rem] md:w-[47rem] w-[20rem] mx-auto" : "xl:ml-20 md:w-[44rem] lg:w-[58rem] xl:w-[74rem] 2xl:w-[94rem] ml-[4rem] w-[18rem]"} bg-gradient-to-r from-purple to-pinkBorder rounded-2xl pl-20`}>
+      <div className="flex items-center h-full relative ml-[-1rem]">
+        <div className="font-font3 text-4xl lg:text-5xl xl:text-6xl text-whiteText">
+          <h1>Find your perfect</h1>
+          <h1>3d model</h1>
+        </div>
+        <div className={`absolute translate-y-[2rem] ${isOpen ? "-translate-x-[4rem] " : "-translate-x-[6rem]"}`}>
+          <img src="src\assets\img\cloud2.gif" alt="rocket animation" className="w-32 xl:w-48" />
+        </div>
+        <div className={`absolute duration-300 -translate-y-[8rem] md:-translate-y-[6rem] md:translate-x-[30rem]  ${isOpen ? "translate-x-[8rem] lg:translate-x-[32rem] xl:translate-x-[45rem]" : "translate-x-[6rem] lg:translate-x-[43rem] xl:translate-x-[55rem]"} `}>
+          <img src="src\assets\img\cloud.gif" alt="cloud animation" className="w-32 xl:w-48" />
+        </div>
+        <div className={`absolute translate-x-[0rem] md:translate-x-[18rem] xl:translate-y-[2.5rem] ${isOpen ? "translate-y-[4rem] md:translate-y-[3.5rem] lg:translate-x-[20rem] xl:translate-x-[32rem]" : "translate-y-[4.5rem] md:translate-y-[3.5rem] lg:translate-x-[32rem] xl:translate-x-[45rem]"}`}>
+          <img src="src\assets\img\rocketship.gif" alt="rocket animation" className="w-80 xl:w-96" />
+        </div>
+      </div>
+    </div>
   )
 }
 

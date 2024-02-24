@@ -8,19 +8,19 @@ const Models = () => {
     
 
     return (
-        <div className={` font-font2 duration-300  ${isOpen ? "xl:ml-[19rem] xl:w-[60rem] w-[22rem]" : "xl:ml-28 md:w-[68rem] ml-[3rem] w-[20rem]  "}`}>
+        <div className={`relative font-font2 duration-300 ${isOpen ? "2xl:w-[80rem] lg:ml-[16rem] xl:w-[62rem] lg:w-[45rem] md:w-[52rem] md:w-[42rem] w-[20rem] mx-auto" : "xl:ml-24 md:w-[44rem] lg:w-[57rem] xl:w-[72rem] 2xl:w-[94rem] lg:ml-[4rem] ml-[4rem] w-[18rem] "}`}>
             {selectedModel && <ModelDetails />} 
-            <ul className="flex flex-wrap gap-4 justify-between w-4/5">
+            <ul className="flex flex-wrap gap-10 justify-between">
                 {models.map(model => (
                     <li key={`${model.uid}`}>
-                        <div className="hover:border-2 hover:border-lightPink md:w-48 md:h-5/6 mb-16  shadow-xl p-6 rounded-xl bg-blackBackground hover:bg-black" onClick={() => handleClick(model)}>
+                        <div className={`hover:border-2 hover:border-lightPink shadow-xl rounded-xl bg-blackBackground hover:bg-black lg:p-3 lg:h-62 p-4 ${isOpen ? " xl:w-[18rem] xl:p-6 lg:w-[13rem] md:w-48 md:p-2" : "xl:w-60 lg:w-[16rem] md:w-48 md:p-2"} `} onClick={() => handleClick(model)}>
                             {model.thumbnails.images.length > 0 && (
-                                <img src={model.thumbnails.images[1].url} alt="model thumbnail" className="h-56  rounded-xl mx-auto mb-6" />
+                                <img src={model.thumbnails.images[2].url} alt="model thumbnail" className="xl:h-40 lg:h-[9rem] rounded-xl mx-auto mb-6" />
                             )}
                             <div className="flex items-center">
                                 <div className="text-white flex flex-col gap-2">
-                                    <h3 className="text-xl">{model.name}</h3>
-                                    <p>{model.user.displayName}</p>
+                                    <h3>{model.name.length > 10 ? model.name.slice(0, 10) + '...' : model.name}</h3>
+                                    <p>{model.user.displayName.length > 10 ? model.user.displayName.slice(0, 10) + '...' : model.user.displayName}</p>
                                 </div>
                                 <div className="text-lightPink ml-auto flex flex-col gap-2">
                                     <p className="flex gap-2"><img src="src\assets\img\eye.png" alt="eye icon" className="w-6" />{model.viewCount}</p>
