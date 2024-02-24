@@ -61,9 +61,9 @@ const ModelDetails = () => {
                         <div className="flex flex-col gap-4">
                             <h1 className="uppercase text-3xl text-rosaClar">{selectedModel!.name}</h1>
                             <div className="flex gap-6 mb-4">
-                                <div className="flex gap-1 text-lightPink"><img src="src\assets\img\eye.png" className="w-6 h-6" />{selectedModel!.viewCount}</div>
-                                <div className="flex gap-1 text-lightPink"><img src="src\assets\img\heart.png" className="w-6" />{selectedModel!.likeCount}</div>
-                                <div className="flex gap-1 text-lightPink"><img src="src\assets\img\comments.png" className="w-6" />{selectedModel!.commentCount}</div>
+                                <div className="flex gap-1 text-lightPink"><img src="\assets\img\eye.png" className="w-6 h-6" />{selectedModel!.viewCount}</div>
+                                <div className="flex gap-1 text-lightPink"><img src="\assets\img\heart.png" className="w-6" />{selectedModel!.likeCount}</div>
+                                <div className="flex gap-1 text-lightPink"><img src="\assets\img\comments.png" className="w-6" />{selectedModel!.commentCount}</div>
                             </div>
                         </div>
                         <div className="border-2 border-lightPurple flex  w-64 md:w-72 bg-black bg-opacity-40 py-2 pr-4 pl-2 rounded-xl justify-between items-center">
