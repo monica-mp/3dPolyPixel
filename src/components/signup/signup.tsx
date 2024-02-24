@@ -14,10 +14,13 @@ function Login() {
     const [error, setError] = useState<string>();
     const {signup} = useAuth();
     const navigate = useNavigate();
+
+    // Handle signup change
     const handleChange = ({target: {name, value}}: {target: {name: string, value: string}}) => {       
         setUser({...user, [name]: value});
       }
 
+      //Submit and errors
     const handleSubmit = async(e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setError('');

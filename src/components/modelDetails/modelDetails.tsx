@@ -7,6 +7,7 @@ const ModelDetails = () => {
     const [comments, setComments] = useState([]);
     const [userCollections, setUserCollections] = useState([]);
 
+    // Load user collections
     const loadUserCollections = async () => {
         if (selectedModel && selectedModel.user) {
             try {
@@ -23,6 +24,7 @@ const ModelDetails = () => {
         }
     };
 
+    // Load model comments
     const loadComments = async () => {
         if (selectedModel) {
             try {

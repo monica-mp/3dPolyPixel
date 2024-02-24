@@ -36,7 +36,7 @@ interface ContextProps {
 }
 
 
-
+// Function to fetch models from the API
 const fetchModels = async () => {
   try {
     const response = await fetch('https://api.sketchfab.com/v3/models?sort_by=createdAt&archives_flavours=false&count=24', {
@@ -62,6 +62,7 @@ export const ContextProvider: React.FC<Props> = ({ children }) => {
   const [models, setModels] = useState<Model[]>([]);
   const [selectedModel, setSelectedModel] = useState<Model | null>(null);  
   
+  
   const getRandomNumber = () => {
     return Math.floor(Math.random() * 100);
 }
@@ -76,11 +77,12 @@ export const ContextProvider: React.FC<Props> = ({ children }) => {
   }, []); 
 
   
-
+    // Handle click on model card
     const handleClick = (model: Model | null): void => {
         setSelectedModel(model); 
     };
   
+    // Handle close of model details
     const handleClose = () => {
       handleClick(null);
   };
